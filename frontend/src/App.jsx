@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/items")
+      .get(`${import.meta.env.VITE_BACKEND_URL}/items`)
       .then(({ data }) => {
         setItems(data);
       })
